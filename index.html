@@ -286,13 +286,67 @@
         </div>
     </div>
     <div class="reviews">
-        <div class="reviews__wrapper-image">
+        <div class="swiper swiper-review">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide reviews__container">
+                    <div class="reviews__wrapper-image">
+                        <img src="./media/BusyGirls.jpg" alt="BusyGirls" class="reviews__image">
+                    </div>
+                    <div class="reviews__content">
+                        <p class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+                        <p class="reviews__customer">Susan Sims, Interaction Designer at XYZ</p>
+                    </div>
+            </div>
+              <div class="swiper-slide reviews__container">
+                    <div class="reviews__wrapper-image">
+                        <img src="./media/BusyGirls.jpg" alt="BusyGirls" class="reviews__image">
+                    </div>
+                    <div class="reviews__content">
+                        <p class="reviews__text">“Slide2”</p>
+                        <p class="reviews__customer">Slide2</p>
+                    </div>
+                </div>
+              <div class="swiper-slide reviews__container">
+                    <div class="reviews__wrapper-image">
+                        <img src="./media/BusyGirls.jpg" alt="BusyGirls" class="reviews__image">
+                    </div>
+                    <div class="reviews__content">
+                        <p class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+                        <p class="reviews__customer">Susan Sims, Interaction Designer at XYZ</p>
+                    </div>
+              </div>
+              <div class="swiper-slide reviews__container">
+                    <div class="reviews__wrapper-image">
+                        <img src="./media/BusyGirls.jpg" alt="BusyGirls" class="reviews__image">
+                    </div>
+                    <div class="reviews__content">
+                        <p class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+                        <p class="reviews__customer">Susan Sims, Interaction Designer at XYZ</p>
+                    </div>
+              </div>
+              <div class="swiper-slide reviews__container">
+                    <div class="reviews__wrapper-image">
+                        <img src="./media/BusyGirls.jpg" alt="BusyGirls" class="reviews__image">
+                    </div>
+                    <div class="reviews__content">
+                        <p class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+                        <p class="reviews__customer">Susan Sims, Interaction Designer at XYZ</p>
+                    </div>
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- <div class="reviews__wrapper-image">
             <img src="./media/BusyGirls.jpg" alt="BusyGirls" class="reviews__image">
         </div>
         <div class="reviews__content">
             <p class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
             <p class="reviews__customer">Susan Sims, Interaction Designer at XYZ</p>
-        </div>
+        </div> -->
     </div>
     <section class="dowland">
         <div class="container dowland__container">
@@ -335,14 +389,17 @@
             </div>
         </div>
         <div class="footer__wrapper-copyright"> 
-            <p class="footer__copyright">
-                Copyright © 2015 ActiveBox. All Rights Reserved Made with <span class="footer__span">by Kamal Chaneman</span> 
-            </p>
+            <div class="container">
+                <p class="footer__copyright">
+                    Copyright © 2015 ActiveBox. All Rights Reserved Made with <span class="footer__span">by Kamal Chaneman</span> 
+                </p>
             </div>
+        </div>
     </footer>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-    <!-- <script>
-        const swiper = new Swiper('.swiper', {
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-review', {
+            // Optional parameters
             loop: true,
 
             // If we need pagination
@@ -351,6 +408,6 @@
                 clickable: true
             },
         });
-    </script> -->
+    </script> 
 </body>
 </html>
