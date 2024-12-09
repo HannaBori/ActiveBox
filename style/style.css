@@ -28,7 +28,15 @@ body {
   align-items: center;
   -moz-column-gap: 30px;
        column-gap: 30px;
+  padding-top: 39px;
+  padding-bottom: 32px;
   border-bottom: 1px solid #BABBC5;
+}
+@media (max-width: 1024px) {
+  .header__content {
+    padding-top: 37px;
+    padding-bottom: 34px;
+  }
 }
 @media (max-width: 915px) {
   .header__content {
@@ -40,6 +48,13 @@ body {
   .header__content {
     border-bottom: none;
     align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .header__content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 36px;
   }
 }
 .header__icon {
@@ -62,7 +77,6 @@ body {
   display: none;
   background-color: transparent;
   border: none;
-  margin: 16px 16px;
 }
 @media (max-width: 767px) {
   .header__menu-icon {
@@ -87,8 +101,6 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  padding-top: 44px;
-  padding-bottom: 38px;
   border-bottom: 3px solid transparent;
   transition: all 0.5s linear;
 }
@@ -103,8 +115,6 @@ body {
     font-size: 12px;
     line-height: 14px;
     color: #fff;
-    padding-bottom: 40px;
-    padding-top: 42px;
   }
 }
 .header__item {
@@ -289,6 +299,10 @@ body {
     height: 52px;
     margin-bottom: 48px;
   }
+  .advantage__wrapper-icon svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 .advantage__title {
   font-size: 24px;
@@ -373,6 +387,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   opacity: 0;
   transition: all 0.5s linear;
 }
@@ -382,16 +397,6 @@ body {
 .projects__content-img:active {
   opacity: 1;
   background-color: rgba(185, 12, 12, 0.8);
-}
-@media (max-width: 1024px) {
-  .projects__content-img {
-    padding: 84px 0 88px;
-  }
-}
-@media (max-width: 767px) {
-  .projects__content-img {
-    padding: 47px 0 51px;
-  }
 }
 .projects__title {
   font-size: 24px;
@@ -693,7 +698,6 @@ body {
 @media (max-width: 767px) {
   .reviews__customer {
     max-width: 100%;
-    margin-left: 3px;
   }
 }
 .reviews .swiper {
