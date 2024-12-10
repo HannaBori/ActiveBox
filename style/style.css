@@ -1,3 +1,30 @@
+@keyframes animate_pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 67, 67, 0);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 67, 67, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 67, 67, 0);
+  }
+}
+@keyframes animate_rotate {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes animate_color {
+  70% {
+    fill: #E71414;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -28,15 +55,7 @@ body {
   align-items: center;
   -moz-column-gap: 30px;
        column-gap: 30px;
-  padding-top: 39px;
-  padding-bottom: 32px;
   border-bottom: 1px solid #BABBC5;
-}
-@media (max-width: 1024px) {
-  .header__content {
-    padding-top: 37px;
-    padding-bottom: 34px;
-  }
 }
 @media (max-width: 915px) {
   .header__content {
@@ -61,6 +80,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header__icon:hover path {
+  animation: animate_color 2.5s infinite;
 }
 @media (max-width: 767px) {
   .header__icon {
@@ -101,6 +123,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  padding-top: 44px;
+  padding-bottom: 38px;
   border-bottom: 3px solid transparent;
   transition: all 0.5s linear;
 }
@@ -224,13 +248,16 @@ body {
   margin: 0 auto;
   cursor: pointer;
   transition: all 0.5s linear;
+  animation: animate_pulse 2s ease infinite;
 }
 .banner__button:hover {
   background-color: #E71414;
+  animation: none;
 }
 .banner__button:active {
   background-color: #FF4343;
   box-shadow: 4px 4px 30px #FF4343;
+  animation: none;
 }
 @media (max-width: 1024px) {
   .banner__button {
@@ -568,12 +595,14 @@ body {
 }
 .workers__icon:hover {
   border: 1px solid #FF4343;
+  animation: animate_rotate 1.5s linear infinite;
 }
 .workers__icon:active path {
   fill: #E71414;
 }
 .workers__icon:active {
   border: 1px solid #E71414;
+  animation: none;
 }
 @media (max-width: 1024px) {
   .workers__icon {
@@ -826,13 +855,16 @@ body {
   margin: 0 auto;
   cursor: pointer;
   transition: all 0.5s linear;
+  animation: animate_pulse 2s ease infinite;
 }
 .dowland__btn:hover {
   background-color: #E71414;
+  animation: none;
 }
 .dowland__btn:active {
   background-color: #FF4343;
   box-shadow: 4px 4px 30px #FF4343;
+  animation: none;
 }
 @media (max-width: 1024px) {
   .dowland__btn {
@@ -964,15 +996,18 @@ body {
 }
 .footer__icon:hover path {
   fill: #FF4343;
+  animation: none;
 }
 .footer__icon:hover {
   border: 1px solid #FF4343;
+  animation: animate_rotate 1.5s linear infinite;
 }
 .footer__icon:active path {
   fill: #E71414;
 }
 .footer__icon:active {
   border: 1px solid #E71414;
+  animation: none;
 }
 @media (max-width: 1024px) {
   .footer__icon {

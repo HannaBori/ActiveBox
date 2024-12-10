@@ -3,6 +3,34 @@
     line-height:$line-height;
     color:$color;
 }
+
+@keyframes animate_pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgb(255, 67, 67,0);
+	}
+	70% {
+		box-shadow: 0 0 0 8px rgb(255, 67, 67,0.4);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgb(255, 67, 67,0);
+	}
+}
+@keyframes animate_rotate {
+	0%,50%,100% {
+        transform:rotate(0deg);
+	}
+	25% {
+        transform:rotate(5deg);
+	}
+	75% {
+        transform:rotate(-5deg);
+	}
+}
+@keyframes animate_color {
+	70% {
+		fill:#E71414
+	}
+}
 *
 {
     margin: 0;
@@ -30,13 +58,7 @@ body {
         justify-content: space-between;
         align-items: center;
         column-gap: 30px;
-        padding-top: 39px;
-        padding-bottom: 32px;
         border-bottom: 1px solid #BABBC5;
-        @media (max-width:1024px){
-            padding-top: 37px;
-            padding-bottom: 34px;
-        }
         @media (max-width:915px){
             column-gap: 20px;
         }
@@ -57,6 +79,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        &:hover path{
+            animation: animate_color 2.5s infinite;
+        }
+
         @media (max-width:767px){
             width:103px;
             height: 14px;
@@ -92,8 +118,8 @@ body {
         font-weight: 700;
         text-transform: uppercase;
         text-decoration: none;  
-        // padding-top: 44px;
-        // padding-bottom: 38px;
+        padding-top: 44px;
+        padding-bottom: 38px;
         border-bottom: 3px solid transparent;
         transition: all 0.5s linear;
         &:hover{
@@ -186,12 +212,15 @@ body {
         margin: 0 auto;
         cursor: pointer;
         transition: all 0.5s linear;
+        animation: animate_pulse 2s ease infinite;
         &:hover{
             background-color: #E71414;
+            animation: none;
         }
         &:active{
             background-color: #FF4343;
             box-shadow: 4px 4px 30px #FF4343;
+            animation: none;
         }
         @media (max-width:1024px){
             max-width: 314px;
@@ -435,12 +464,14 @@ body {
         }
         &:hover{
             border:1px solid #FF4343;
+            animation: animate_rotate 1.5s linear infinite;
         }
         &:active path{
             fill:#E71414;
         }
         &:active{
             border:1px solid #E71414;
+            animation: none;
         }
         @media (max-width:1024px){
             width: 32.8px;
@@ -623,12 +654,15 @@ body {
         margin: 0 auto;
         cursor: pointer;
         transition: all 0.5s linear;
+        animation: animate_pulse 2s ease infinite;
         &:hover{
             background-color: #E71414;
+            animation: none;
         }
         &:active{
             background-color: #FF4343;
             box-shadow: 4px 4px 30px #FF4343;
+            animation: none;
         }
         @media (max-width:1024px){
             @include font(18px,21px,#fff);
@@ -715,20 +749,24 @@ body {
         justify-content: center;
         align-items: center;
         transition: all 0.5s linear;
+        
         path{
             transition: all 0.5s linear;
         }
         &:hover path{
             fill:#FF4343;
+            animation: none;
         }
         &:hover{
             border:1px solid #FF4343;
+            animation: animate_rotate 1.5s linear infinite;
         }
         &:active path{
             fill:#E71414;
         }
         &:active{
             border:1px solid #E71414;
+            animation: none;
         }
         @media (max-width:1024px){
             width: 33px;
