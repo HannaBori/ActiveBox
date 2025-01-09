@@ -31,6 +31,10 @@
 		fill:#E71414
 	}
 }
+@keyframes animate_visibility {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}  
 *
 {
     margin: 0;
@@ -50,6 +54,7 @@ body {
     display: none;
 }
 .active{
+    animation: animate_visibility 1.5s;
     display: none;
     @media (max-width:767px){
         display: flex;
@@ -193,6 +198,7 @@ body {
                 top: 56px;
                 position: absolute;
                 background-color: rgb(37, 43, 73, 0.9);
+                animation: animate_visibility 1.5s;
             }
         }
     }
